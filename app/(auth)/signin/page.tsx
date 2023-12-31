@@ -31,12 +31,12 @@ const SignUp = () => {
 
   const router = useRouter();
 
-  useEffect(() => {
-    const token = localStorage.getItem("yamwaToken");
-    if (token) {
-      router.push("/home");
-    }
-  }, []);
+  // useEffect(() => {
+  //   const token = localStorage.getItem("yamwaToken");
+  //   if (token) {
+  //     router.push("/home");
+  //   }
+  // }, []);
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();

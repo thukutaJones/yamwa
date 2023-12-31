@@ -43,24 +43,6 @@ const Profile = () => {
     }
   };
 
-  const handleDeleteAccount = async () => {
-    setIsLoading(true);
-    try {
-      const token: string = localStorage.getItem("yamwaToken") || "";
-      const userId = await getUserId(token);
-      await axios.delete(`${baseUrl}/api/me/${userId}`, {
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-      });
-      localStorage.removeItem("yamwaToken");
-      router.replace("/signin");
-    } catch (error) {
-    } finally {
-      setIsLoading(false);
-    }
-  };
-
   useEffect(() => {
     const token = localStorage.getItem("yamwaToken");
     if (!token) {
