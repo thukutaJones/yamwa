@@ -100,15 +100,21 @@ const Profile = () => {
             style={{ borderRadius: "8px" }}
           >
             <p className="text-xs md:text-sm font-bold text-gray-600">
-              Personal Information
+              User Information
             </p>
             <div className="p-4 mt-2 md:mt-0 md:p-0 bg-white md:bg-transparent w-full rounded-2xl">
               <div className="w-full flex flex-col md:mt-4 md:flex-row md:gap-48">
                 <div className="flex flex-row md:flex-col gap-2 md:gap-0 pb-3 border-b md:border-0 border-gray-300">
                   <p className="text-black font-sans font-bold">
-                    Full Name<span className="md:hidden">:</span>{" "}
+                    User name <span className="md:hidden">:</span>{" "}
                   </p>
                   <p className="text-gray-500">{user?.userName}</p>
+                </div>
+                <div className="flex flex-row md:flex-col gap-2 md:gap-0 pb-3 border-b md:border-0 border-gray-300">
+                  <p className="text-black font-sans font-bold">
+                    Program<span className="md:hidden">:</span>{" "}
+                  </p>
+                  <p className="text-gray-500">{user?.program}</p>
                 </div>
                 <div className="flex flex-row md:flex-col gap-2 md:gap-0 mt-2 md:mt-0">
                   <p className="text-black font-sans font-bold">
@@ -126,13 +132,13 @@ const Profile = () => {
           >
             <p className="text-xs md:text-sm font-bold text-black">Account</p>
             <div className="p-4 mt-2 md:mt-0 md:p-0 bg-white md:bg-transparent w-full rounded-2xl">
-              <div
+              {/* <div
                 className="flex gap-2 md:mt-4 text-red-600 items-center border-b pb-2 md:border-0 md:pb-0 border-gray-300 cursor-pointer"
                 onClick={handleDeleteAccount}
               >
                 <MdDelete size={30} />
                 <p>Delete Account</p>
-              </div>
+              </div> */}
               <div
                 className="flex gap-2 mt-2 text-blue-600 items-center cursor-pointer"
                 onClick={handleLogout}

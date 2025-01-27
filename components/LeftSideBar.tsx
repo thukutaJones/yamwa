@@ -6,8 +6,7 @@ import React, { useState } from "react";
 import { RiHome5Fill } from "react-icons/ri";
 import { CgProfile } from "react-icons/cg";
 import { usePathname, useRouter } from "next/navigation";
-import { TbFileDescription, TbFileCv } from "react-icons/tb";
-import { LiaHandshake } from "react-icons/lia";
+import { MdEventNote } from "react-icons/md";
 
 const LeftSideBar = () => {
   const currentPath = usePathname();
@@ -105,27 +104,27 @@ const LeftSideBar = () => {
               <li>
                 <button
                   className={`p-2 w-full text-left rounded-3xl hover:scale-105 ${
-                    currentPath === "/full-timetable"
+                    currentPath === "/events"
                       ? "bg-green-700"
                       : "bg-white"
                   }  `}
-                  onClick={() => handlePressTab("/full-timetable")}
+                  onClick={() => handlePressTab("/events")}
                 >
                   <div className="flex gap-2 items-center px-4">
-                    <TbFileDescription
+                    <MdEventNote
                       size={25}
                       color={
-                        currentPath === "/full-timetable" ? "white" : "green"
+                        currentPath === "/events" ? "white" : "green"
                       }
                     />
                     <p
                       className={`${
-                        currentPath === "/full-timetable"
+                        currentPath === "/events"
                           ? "text-white"
                           : "text-green-600"
                       }`}
                     >
-                      Full timetable
+                     Events
                     </p>
                   </div>
                 </button>
