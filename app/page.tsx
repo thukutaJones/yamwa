@@ -5,12 +5,12 @@ import { useEffect } from "react";
 export default function HeroSection() {
   const router = useRouter();
 
-  // useEffect(() => {
-  //   const token = localStorage.getItem("yamwaToken");
-  //   if (token) {
-  //     router.push("/home");
-  //   }
-  // }, []);
+  useEffect(() => {
+    const token = localStorage.getItem("yamwaToken");
+    if (token) {
+      router.push("/home");
+    }
+  }, []);
 
   return (
     <div
