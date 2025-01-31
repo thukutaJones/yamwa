@@ -49,7 +49,6 @@ const SignUp = () => {
         router.push("/home");
       }
     } catch (error: any) {
-      console.log(error);
       setErrorMessage(
         error?.response?.data?.message
           ? error.response.data.message

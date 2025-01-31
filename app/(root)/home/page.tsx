@@ -48,10 +48,8 @@ const Home = () => {
           programCode: program,
           day: currentDay,
         });
-        console.log(res?.data?.schedule);
         setSchedule(res?.data?.schedule);
       } catch (error) {
-        console.log(error);
       } finally {
         setIsFetching(false);
       }

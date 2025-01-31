@@ -149,6 +149,5 @@ export const generateTimeTableHtml = (data: any) => {
 `;
    return html;
   } catch (error) {
-    console.log(error);
   }
 };

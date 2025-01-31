@@ -8,7 +8,6 @@ export const retriveUserData = async (token: string) => {
   try {
     const res = await axios.get(`${baseUrl}/api/me/${userId}`);
     const user = res?.data?.user;
-    console.log(user)
     return user;
   } catch (error: any) {}
 };

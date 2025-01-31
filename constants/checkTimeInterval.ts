@@ -2,7 +2,6 @@ export function checkTimeInterval(interval: string, day: number): { status: stri
   const currentTime = new Date();
 
   if (!interval.includes('-')) {
-    console.error("Invalid interval format. Use 'HH:MMAM-HH:MMPM' format.");
     return null;
   }
 
@@ -18,13 +17,11 @@ export function checkTimeInterval(interval: string, day: number): { status: stri
     const timeParts = timeString.slice(0, -2).split(':');
 
     if (timeParts.length !== 2 || (period !== 'AM' && period !== 'PM')) {
-      console.error("Invalid time format. Use 'HH:MMAM' or 'HH:MMPM' format.");
       return null;
     }
 
     let [hours, minutes] = timeParts.map(Number);
     if (isNaN(hours) || isNaN(minutes) || hours < 1 || hours > 12 || minutes < 0 || minutes > 59) {
-      console.error("Invalid time values.");
       return null;
     }
 
@@ -42,7 +39,6 @@ export function checkTimeInterval(interval: string, day: number): { status: stri
   const endTime = parseTime(end);
 
   if (!startTime || !endTime) {
-    console.error("Failed to parse start or end time.");
     return null;
   }
 
